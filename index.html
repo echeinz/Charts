@@ -1,0 +1,52 @@
+<html>
+
+    <head>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+
+    </head>
+
+    <body>
+        <canvas id="myChart" width="400" height="400"></canvas>
+        <script>
+
+            var data = [
+                {
+                    x:0,
+                    y:0
+                },
+                {
+                    x:34,
+                    y:20
+                },
+                {
+                    x:254,
+                    y:20
+                },
+                {
+                    x:102,
+                    y:2
+                },
+                {
+                    x:12,
+                    y:0
+                }
+            ]
+
+            var graph = {
+                type : 'line',
+                data: {
+                    datasets: [{
+                        label: "Dicks",
+                        data : data
+                    }]
+                }
+            };
+
+            var ctx = document.getElementById("myChart").getContext('2d');
+            ctx.canvas.width = 400;
+            ctx.canvas.height = 100;
+            var myChart = new Chart(ctx,graph );
+        </script>
+    </body>
+
+</html>
